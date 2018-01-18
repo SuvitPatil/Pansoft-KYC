@@ -1,0 +1,99 @@
+composer card create -p connection/org1/connection-org1-only.json -u PeerAdmin -c /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem -k /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/94d1a62a8a316cf8def573bce77d453ff7a07372a394831663fc72c2c3849779_sk -r PeerAdmin -r ChannelAdmin
+
+
+composer card create -p connection/org1/connection-org1.json -u PeerAdmin -c /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem -k /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/94d1a62a8a316cf8def573bce77d453ff7a07372a394831663fc72c2c3849779_sk -r PeerAdmin -r ChannelAdmin
+
+
+
+composer card create -p connection/org2/connection-org2-only.json -u PeerAdmin -c /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem -k /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/09ce1d6734c81d3830dadbdaf20119405334f663acb2bcb351a1415b9a95a4eb_sk -r PeerAdmin -r ChannelAdmin
+
+
+composer card create -p connection/org2/connection-org2.json -u PeerAdmin -c /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem -k /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/09ce1d6734c81d3830dadbdaf20119405334f663acb2bcb351a1415b9a95a4eb_sk -r PeerAdmin -r ChannelAdmin
+
+
+
+composer card create -p connection/org3/connection-org3-only.json -u PeerAdmin -c /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/signcerts/Admin@org3.example.com-cert.pem -k /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/keystore/1b1ff2780bbfcb28140f0032ffb4795412e0cfd3e10cc944be07f63eba20c8f2_sk -r PeerAdmin -r ChannelAdmin
+
+
+composer card create -p connection/org3/connection-org3.json -u PeerAdmin -c /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/signcerts/Admin@org3.example.com-cert.pem -k /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/keystore/1b1ff2780bbfcb28140f0032ffb4795412e0cfd3e10cc944be07f63eba20c8f2_sk -r PeerAdmin -r ChannelAdmin
+
+composer card create -p connection/org4/connection-org4-only.json -u PeerAdmin -c /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/signcerts/Admin@org4.example.com-cert.pem -k /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/keystore/329793bcb0352b5b3de2aa934fbe12f89874fca57cc62db300195d0ee3fe7c0f_sk -r PeerAdmin -r ChannelAdmin
+
+
+composer card create -p connection/org4/connection-org4.json -u PeerAdmin -c /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/signcerts/Admin@org4.example.com-cert.pem -k /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/keystore/329793bcb0352b5b3de2aa934fbe12f89874fca57cc62db300195d0ee3fe7c0f_sk -r PeerAdmin -r ChannelAdmin
+
+
+composer archive create -t dir -n .
+
+
+composer card import -f PeerAdmin@pansoft-network-org1-only.card
+composer card import -f PeerAdmin@pansoft-network-org1.card
+composer card import -f PeerAdmin@pansoft-network-org2-only.card
+composer card import -f PeerAdmin@pansoft-network-org2.card
+composer card import -f PeerAdmin@pansoft-network-org3-only.card
+composer card import -f PeerAdmin@pansoft-network-org3.card
+composer card import -f PeerAdmin@pansoft-network-org4-only.card
+composer card import -f PeerAdmin@pansoft-network-org4.card
+
+
+composer card delete -n PeerAdmin@pansoft-network-org1-only
+composer card delete -n PeerAdmin@pansoft-network-org1
+composer card delete -n PeerAdmin@pansoft-network-org2-only
+composer card delete -n PeerAdmin@pansoft-network-org2
+composer card delete -n PeerAdmin@pansoft-network-org3-only
+composer card delete -n PeerAdmin@pansoft-network-org3
+composer card delete -n PeerAdmin@pansoft-network-org4-only
+composer card delete -n PeerAdmin@pansoft-network-org4
+composer card delete -n bank1_pansoft@pansoft-network
+composer card delete -n bank2_pansoft@pansoft-network
+composer card delete -n bank3_pansoft@pansoft-network
+composer card delete -n bank4_pansoft@pansoft-network
+
+
+composer runtime install -c PeerAdmin@pansoft-network-org1-only -n pansoft-network
+composer runtime install -c PeerAdmin@pansoft-network-org2-only -n pansoft-network
+composer runtime install -c PeerAdmin@pansoft-network-org3-only -n pansoft-network
+composer runtime install -c PeerAdmin@pansoft-network-org4-only -n pansoft-network
+
+
+composer identity request -c PeerAdmin@pansoft-network-org1-only -u admin -s adminpw -d bank1_pansoft
+composer identity request -c PeerAdmin@pansoft-network-org2-only -u admin -s adminpw -d bank2_pansoft
+composer identity request -c PeerAdmin@pansoft-network-org3-only -u admin -s adminpw -d bank3_pansoft
+composer identity request -c PeerAdmin@pansoft-network-org4-only -u admin -s adminpw -d bank4_pansoft
+
+
+composer network start -c PeerAdmin@pansoft-network-org1 -a pansoft-network@0.0.1.bna -A bank1_pansoft -C /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/bank1_pansoft/admin-pub.pem -A bank2_pansoft -C /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/bank2_pansoft/admin-pub.pem -A bank3_pansoft -C /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/bank3_pansoft/admin-pub.pem -A bank4_pansoft -C /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/bank4_pansoft/admin-pub.pem
+
+
+
+composer card create -p /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/connection/org1/connection-org1.json -u bank1_pansoft -n pansoft-network -c /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/bank1_pansoft/admin-pub.pem -k /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/bank1_pansoft/admin-priv.pem
+
+composer card import -f bank1_pansoft@pansoft-network.card
+composer network ping -c bank1_pansoft@pansoft-network
+
+
+
+
+composer card create -p /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/connection/org2/connection-org2.json -u bank2_pansoft -n pansoft-network -c /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/bank2_pansoft/admin-pub.pem -k /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/bank2_pansoft/admin-priv.pem
+
+composer card import -f bank2_pansoft@pansoft-network.card
+composer network ping -c bank2_pansoft@pansoft-network
+
+
+
+
+composer card create -p /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/connection/org3/connection-org3.json -u bank3_pansoft -n pansoft-network -c /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/bank3_pansoft/admin-pub.pem -k /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/bank3_pansoft/admin-priv.pem
+
+composer card import -f bank3_pansoft@pansoft-network.card
+composer network ping -c bank3_pansoft@pansoft-network
+
+
+
+
+composer card create -p /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/connection/org4/connection-org4.json -u bank4_pansoft -n pansoft-network -c /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/bank4_pansoft/admin-pub.pem -k /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/bank4_pansoft/admin-priv.pem
+
+composer card import -f bank4_pansoft@pansoft-network.card
+composer network ping -c bank4_pansoft@pansoft-network
+
+
+

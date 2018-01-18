@@ -1,0 +1,28 @@
+{
+    "name": "pansoft-network-org2-only",
+    "type": "hlfv1",
+    "mspID": "Org2MSP",
+    "peers": [
+        {
+            "requestURL": "grpcs://localhost:8051",
+            "eventURL": "grpcs://localhost:8053",
+            "cert": "/home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt",
+            "hostnameOverride": "peer0.org2.example.com"
+        }
+    ],
+    "ca": {
+        "url": "https://localhost:8054",
+        "name": "ca_peerOrg2",
+        "cert": "/home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt",
+        "hostnameOverride": "ca_peerOrg2"
+    },
+    "orderers": [
+        {
+            "url" : "grpcs://localhost:7050",
+            "cert": "/home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt",
+            "hostnameOverride": "orderer.example.com"
+        }
+    ],
+    "channel": "pansoft-channel",
+    "timeout": 300
+}

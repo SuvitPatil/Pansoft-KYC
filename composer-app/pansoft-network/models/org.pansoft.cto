@@ -1,0 +1,27 @@
+/**
+ * Write your model definitions here
+ */
+
+namespace org.pansoft
+
+participant BankParticipant identified by bankId{
+	o String bankId
+	o String bankName
+	o String branchName
+}
+
+asset KYCDetailsAsset identified by kycId{
+	o String kycId
+	o String userId
+	o String userName
+	o String attachment
+	o String createdDate
+	o String validTillDate
+	o String kycCount
+	--> BankParticipant kycBank
+}
+
+transaction UpdateTransaction{
+	--> KYCDetailsAsset kycDetailsAsset
+	o String newAttachment
+}
