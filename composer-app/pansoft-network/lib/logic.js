@@ -14,6 +14,7 @@ function updateTransaction(tx) {
 
     // Update the asset with the new value.
     tx.kycDetailsAsset.attachment = tx.newAttachment;
+    tx.kycDetailsAsset.status = tx.newStatus;
 
     // Get the asset registry for the asset.
     return getAssetRegistry('org.pansoft.KYCDetailsAsset')
