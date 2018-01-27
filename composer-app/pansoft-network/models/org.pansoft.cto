@@ -15,13 +15,14 @@ asset KYCDetailsAsset identified by kycId{
 	o String userId
 	o String userName
 	o String attachment
-	o String createdDate
-	o String validTillDate
-	o String kycCount
+	o DateTime createdDate
+	o DateTime validTillDate
+	o String status
 	--> BankParticipant kycBank
 }
 
 transaction UpdateTransaction{
 	--> KYCDetailsAsset kycDetailsAsset
 	o String newAttachment
+	o String newStatus
 }
