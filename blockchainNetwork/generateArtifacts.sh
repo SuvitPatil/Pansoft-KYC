@@ -9,7 +9,7 @@
 #set -e
 
 CHANNEL_NAME=$1
-: ${CHANNEL_NAME:="unilever-channel"}
+: ${CHANNEL_NAME:="pansoft-channel"}
 echo $CHANNEL_NAME
 
 export FABRIC_ROOT=$PWD/../..
@@ -19,7 +19,7 @@ echo
 OS_ARCH=$(echo "$(uname -s|tr '[:upper:]' '[:lower:]'|sed 's/mingw64_nt.*/windows/')-$(uname -m | sed 's/x86_64/amd64/g')" | awk '{print tolower($0)}')
 
 ## Using docker-compose template replace private key file names with constants
-function replacePrivateKey () {
+function replacePrivateKey (){
 	ARCH=`uname -s | grep Darwin`
 	if [ "$ARCH" == "Darwin" ]; then
 		OPTS="-it"
@@ -72,7 +72,7 @@ function generateCerts (){
 }
 
 ## Generate orderer genesis block , channel configuration transaction and anchor peer update transactions
-function generateChannelArtifacts() {
+function generateChannelArtifacts(){
 
 	CONFIGTXGEN=./bin/configtxgen
 	if [ -f "$CONFIGTXGEN" ]; then
