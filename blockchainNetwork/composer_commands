@@ -1,3 +1,18 @@
+
+composer card delete -n PeerAdmin@pansoft-network-org1-only
+composer card delete -n PeerAdmin@pansoft-network-org1
+composer card delete -n PeerAdmin@pansoft-network-org2-only
+composer card delete -n PeerAdmin@pansoft-network-org2
+composer card delete -n PeerAdmin@pansoft-network-org3-only
+composer card delete -n PeerAdmin@pansoft-network-org3
+composer card delete -n PeerAdmin@pansoft-network-org4-only
+composer card delete -n PeerAdmin@pansoft-network-org4
+composer card delete -n bank1_pansoft@pansoft-network
+composer card delete -n bank2_pansoft@pansoft-network
+composer card delete -n bank3_pansoft@pansoft-network
+composer card delete -n bank4_pansoft@pansoft-network
+
+
 composer card create -p connection/org1/connection-org1-only.json -u PeerAdmin -c /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem -k /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/94d1a62a8a316cf8def573bce77d453ff7a07372a394831663fc72c2c3849779_sk -r PeerAdmin -r ChannelAdmin
 
 
@@ -23,8 +38,6 @@ composer card create -p connection/org4/connection-org4-only.json -u PeerAdmin -
 composer card create -p connection/org4/connection-org4.json -u PeerAdmin -c /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/signcerts/Admin@org4.example.com-cert.pem -k /home/suvit/GoWork/fabric_V1/pan/blockchainNetwork/crypto-config/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/keystore/329793bcb0352b5b3de2aa934fbe12f89874fca57cc62db300195d0ee3fe7c0f_sk -r PeerAdmin -r ChannelAdmin
 
 
-composer archive create -t dir -n .
-
 
 composer card import -f PeerAdmin@pansoft-network-org1-only.card
 composer card import -f PeerAdmin@pansoft-network-org1.card
@@ -34,20 +47,6 @@ composer card import -f PeerAdmin@pansoft-network-org3-only.card
 composer card import -f PeerAdmin@pansoft-network-org3.card
 composer card import -f PeerAdmin@pansoft-network-org4-only.card
 composer card import -f PeerAdmin@pansoft-network-org4.card
-
-
-composer card delete -n PeerAdmin@pansoft-network-org1-only
-composer card delete -n PeerAdmin@pansoft-network-org1
-composer card delete -n PeerAdmin@pansoft-network-org2-only
-composer card delete -n PeerAdmin@pansoft-network-org2
-composer card delete -n PeerAdmin@pansoft-network-org3-only
-composer card delete -n PeerAdmin@pansoft-network-org3
-composer card delete -n PeerAdmin@pansoft-network-org4-only
-composer card delete -n PeerAdmin@pansoft-network-org4
-composer card delete -n bank1_pansoft@pansoft-network
-composer card delete -n bank2_pansoft@pansoft-network
-composer card delete -n bank3_pansoft@pansoft-network
-composer card delete -n bank4_pansoft@pansoft-network
 
 
 composer runtime install -c PeerAdmin@pansoft-network-org1-only -n pansoft-network
